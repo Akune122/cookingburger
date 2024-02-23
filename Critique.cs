@@ -3,8 +3,8 @@ public class Critique:Client
     private string histoire;
     private string date_naissance;
 
-    public Critique(string histoire,string date_naissance,string nom,string prenom,string dialogue,int reputation):
-    base(nom,prenom,dialogue,reputation)
+    public Critique(string histoire,string date_naissance,string nom,string prenom,string dialogue,int reputation,Aliment allergique,Aliment primordial):
+    base(nom,prenom,dialogue,reputation,allergique,primordial)
     {
         this.histoire=histoire;
         this.date_naissance=date_naissance;

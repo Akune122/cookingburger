@@ -1,4 +1,4 @@
-public class Aliment
+public abstract class Aliment
 {
     private string affichage;
 

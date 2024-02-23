@@ -1,4 +1,4 @@
-public class Viande:Aliment
+public abstract class Viande:Aliment
 {
     public Viande(string affichage):base(affichage)
     {

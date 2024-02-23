@@ -1,6 +1,6 @@
 using System;
 
-public class Personnage
+public abstract class Personnage
 {
     private int reputation;
 
@@ -16,9 +16,11 @@ public class Personnage
 
 static void Main(string[] args)
 {
-    Personnage test;
-    test = new Personnage(100);
+    Joueur test;
+    test = new Joueur("Loïc","★",100);
     Console.WriteLine(test.getRep());
+    Console.WriteLine(test.getPseudo());
+    Console.WriteLine(test.getEtoiles());
 }
 
 
