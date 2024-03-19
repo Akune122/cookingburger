@@ -30,4 +30,16 @@ public class Client:Personnage
     {
         return this.dialogue;
     }
+
+    public bool verifB(Burger burger)
+    {
+        for (int i=1;i<7;i++)
+    {
+        if (burger.getCouche(i)==this.primordial)
+        {
+            return true;
+        }
+    }
+    return false ;
+    }
 }

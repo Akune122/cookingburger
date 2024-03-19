@@ -14,14 +14,4 @@ public abstract class Personnage
         return this.reputation;
     }
 
-static void Main(string[] args)
-{
-    Joueur test;
-    test = new Joueur("Loïc","★",100);
-    Console.WriteLine(test.getRep());
-    Console.WriteLine(test.getPseudo());
-    Console.WriteLine(test.getEtoiles());
-}
-
-
 }

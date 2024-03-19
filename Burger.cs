@@ -1,3 +1,5 @@
+using System;
+
 public class Burger
 {
     private Aliment couche1;
@@ -40,6 +42,14 @@ public class Burger
         }
         else {
             return "Couche inexistante";
+        }
+    }
+
+    public void afficheB()
+    {
+        int i;
+        for (i=1;i<7;i++) {
+            Console.WriteLine(this.getCouche(i));
         }
     }
 

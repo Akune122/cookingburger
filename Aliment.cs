@@ -11,4 +11,10 @@ public abstract class Aliment
     {
         return this.affichage;
     }
+
+    public string changeAffichage(string nom) 
+    {
+        this.affichage=nom;
+        return this.affichage;
+    }
 }
