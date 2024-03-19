@@ -79,13 +79,17 @@ class Program {
 //-------------------------------
 
     Client c1;
-    c1 = new Client("ZAERCHER","Lucas","<Bonjour, je veux un burger simple ! Mais je n'aime que le steak et pas les oignons -_- >",0,oignon,steak,bc1);
+    c1 = new Client("ZAERCHER","Lucas","<Bonjour, je veux un burger simple ! Mais je n'aime que le steak et pas les oignons -_- >",0,oignon,steak);
 
 
+
+    do {
     Console.WriteLine("----------------------------------------------------------------------------------------");
     Console.WriteLine("Votre pseudo : "+j1.getPseudo()+" / Votre réputation : "+j1.getRep()+" / Vos étoiles : "+j1.getEtoiles());
     Console.WriteLine("----------------------------------------------------------------------------------------");
 
+    Console.WriteLine("Appuyer sur une touche pour recevoir un client...");
+    Console.ReadLine();
     Console.WriteLine("Voici votre premier client :"+c1.getPrenom()+" "+c1.getNom());
     Console.WriteLine(c1.getDialogue());
 
@@ -287,8 +291,29 @@ class Program {
     Console.WriteLine("Appuyer sur une touche pour continuer...");
     Console.ReadLine();
     
-    Console.WriteLine(c1.verifB(bj_1));
+    if (c1.verifB1(bj_1)==true && c1.verifB2(bj_1)==false) 
+    {
+        Console.WriteLine(c1.getPrenom()+" : Merci le burger était parfait !");
+        j1.updateRep(10);
+    }
+    else if (c1.verifB1(bj_1)==false && c1.verifB2(bj_1)==false)
+    {
+        Console.WriteLine(c1.getPrenom()+" : Je trouve qu'il manquait quelque chose...");
+        j1.updateRep(5);
+    }
+    else if (c1.verifB1(bj_1)==true && c1.verifB2(bj_1)==true)
+    {
+        Console.WriteLine(c1.getPrenom()+" : Y'a un truc que je peux pas manger là-dedans");
+        j1.updateRep(-5);
+    }
+    else {
+        Console.WriteLine(c1.getPrenom()+" : HORRIBLE !");
+        j1.updateRep(-10);
+    }
 
+    Console.WriteLine(" ");
+
+    }while(j1.getRep()>=0);
 
 }
 

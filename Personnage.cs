@@ -14,4 +14,9 @@ public abstract class Personnage
         return this.reputation;
     }
 
+    public void updateRep(int i)
+    {
+        this.reputation = this.reputation+i;
+    }
+
 }

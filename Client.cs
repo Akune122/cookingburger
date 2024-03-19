@@ -31,11 +31,23 @@ public class Client:Personnage
         return this.dialogue;
     }
 
-    public bool verifB(Burger burger)
+    public bool verifB1(Burger burger)
     {
         for (int i=1;i<7;i++)
     {
-        if (burger.getCouche(i)==this.primordial)
+        if (burger.getCouche(i)==this.primordial.getAffichage())
+        {
+            return true;
+        }
+    }
+    return false ;
+    }
+
+    public bool verifB2(Burger burger)
+    {
+        for (int i=1;i<7;i++)
+    {
+        if (burger.getCouche(i)==this.allergique.getAffichage())
         {
             return true;
         }
