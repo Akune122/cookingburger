@@ -52,6 +52,6 @@ public class Client:Personnage
             return true;
         }
     }
-    return false ;
+    return true ;
     }
 }

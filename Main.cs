@@ -368,9 +368,16 @@ Critique[] rep20 = new Critique[] {critique1};
     Console.ReadLine();
     Console.WriteLine("Voici votre premier client :"+client.getPrenom()+" "+client.getNom());
     Console.WriteLine(client.getDialogue());
-    Console.WriteLine("Voici l'histoire de "+client.getPrenom());
-    Console.WriteLine(client.getHistoire());
-
+    Console.WriteLine("");
+    Console.WriteLine("Voulez-vous entendre son histoire ?");
+    Console.WriteLine("Oui/Non");
+    choix = Console.ReadLine();
+    Console.WriteLine("");
+    if (choix=="Oui")
+    {
+        Console.WriteLine("Voici l'histoire de "+client.getPrenom());
+        Console.WriteLine(client.getHistoire());
+    }
     Console.WriteLine("");
 
     do {
