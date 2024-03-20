@@ -67,7 +67,8 @@ class Program {
     Mayo mayo;
     mayo = new Mayo("Mayo");
 //-------------------------------
-    
+// Définition des couches
+//-------------------------------
     Pain co1=null;
     Sauce co2=null;
     Fromage co3=null;
@@ -78,7 +79,7 @@ class Program {
 //Critique HISTOIRES
 //-------------------------------
 
-string histoire_claire="  Claire BASTIEN est une pilote de Formule 1 connue dans le monde entier !\n 133 victoires en grand prix, + de 200 podiums et + de 100 poles positions.\n Elle a révelé son secret après son 8ème sacre de championne du monde.\n Elle mange énormément de cheddar dans des burgers et adore visiter les plus grands restaurants du monde.\n En revanche, elle est allergique aux cepe...";
+string histoire_claire="  Claire BASTIEN est une pilote de Formule 1 connue dans le monde entier !\n 133 victoires en grand prix, + de 200 podiums et + de 100 poles positions.\n Elle a révelé son secret après son 8ème sacre de championne du monde.\n Elle mange énormément de frommage en quadrilatère avec des côtés identiques dans des burgers et adore visiter les plus grands restaurants du monde.\n En revanche, elle est allergique aux cepe...";
 
 //-------------------------------
 // Clients
@@ -110,6 +111,7 @@ Critique[] rep20 = new Critique[] {critique1};
 //-------------------------------
 // Code
 //-------------------------------
+do{
     do {
     foreach (var client in rep0) {
         if (j1.getRep()>19 || j1.getRep()<0)
@@ -602,7 +604,14 @@ Critique[] rep20 = new Critique[] {critique1};
 
     }while(j1.getRep()>=20 && j1.getRep()<50);
 
-}
+}while(j1.getRep()>0);
+
+    Console.WriteLine("----------------------------------------------------------------------------------------");
+    Console.WriteLine("Votre pseudo : "+j1.getPseudo()+" / Votre réputation : "+j1.getRep()+" / Vos étoiles : "+j1.getEtoiles());
+    Console.WriteLine("----------------------------------------------------------------------------------------");
+    Console.WriteLine("Vous avez perdu, votre réputation est en dessous de 0, vous faites faillite !");
+
+} 
 
 }
 
