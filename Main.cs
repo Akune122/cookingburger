@@ -100,11 +100,17 @@ c4 = new Client("ZAERCHER","Yves","<Bonjour mon petit gars, j'aimerai un burger 
 Critique critique1;
 critique1 = new Critique(histoire_claire,"31/07/2005","BASTIEN","Claire","<Bonjour, j'aimerai manger aujourd'hui.>",20,oignon,cheddar);
 
+Client c5;
+c5 = new Client("BASTIEN","Cerise","<Miaou miaou ! Miaou miaou ! Miaou miaou ! Miaou miaou ! Miaou miaou ! Miaou miaou ! (Vous croyez entendre steak et parmesan)>",0,parmesan,steak);
+
+Client c6;
+c6 = new Client("SAMARAS","Ken","<Yo man, tu me fais un petit plat pas trop mal stp ;) Je kiff grave de bacon mais pas les tomates>",0,tomate,bacon);
+
 //-------------------------------
 // Listes Client
 //-------------------------------
 
-Client[] rep0 = new Client[] {c1,c2,c3,c4};
+Client[] rep0 = new Client[] {c1,c2,c3,c4,c5,c6};
 Critique[] rep20 = new Critique[] {critique1};
 
 
@@ -114,7 +120,8 @@ Critique[] rep20 = new Critique[] {critique1};
 do{
     do {
     foreach (var client in rep0) {
-        if (j1.getRep()>19 || j1.getRep()<0)
+        j1.updateEtoiles1();
+        if (j1.getRep()>50 || j1.getRep()<0)
     {
         continue;
     }
@@ -349,7 +356,7 @@ do{
     Console.ReadLine();
     }
 
-    }while(j1.getRep()>=0 && j1.getRep()<20);
+    }while(j1.getRep()>=0 && j1.getRep()<50);
 
 
 
@@ -358,7 +365,8 @@ do{
 //-------------------------------------------------------------------------------------------------------------------
     do {
     foreach (var client in rep20) {
-        if (j1.getRep()>50 || j1.getRep()<20)
+        j1.updateEtoiles2();
+        if (j1.getRep()>100 || j1.getRep()<70)
     {
         continue;
     }
@@ -602,14 +610,23 @@ do{
     Console.ReadLine();
     }
 
-    }while(j1.getRep()>=20 && j1.getRep()<50);
+    }while(j1.getRep()>=70 && j1.getRep()<100);
 
 }while(j1.getRep()>0);
 
+if (j1.getRep()>100)
+{
+    Console.WriteLine("----------------------------------------------------------------------------------------");
+    Console.WriteLine("Votre pseudo : "+j1.getPseudo()+" / Votre réputation : "+j1.getRep()+" / Vos étoiles : "+j1.getEtoiles());
+    Console.WriteLine("----------------------------------------------------------------------------------------");
+    Console.WriteLine("Bravo ! Voous êtes le chef le plus connu de France grâce à vos burgers !");
+}
+else {
     Console.WriteLine("----------------------------------------------------------------------------------------");
     Console.WriteLine("Votre pseudo : "+j1.getPseudo()+" / Votre réputation : "+j1.getRep()+" / Vos étoiles : "+j1.getEtoiles());
     Console.WriteLine("----------------------------------------------------------------------------------------");
     Console.WriteLine("Vous avez perdu, votre réputation est en dessous de 0, vous faites faillite !");
+}
 
 } 
 

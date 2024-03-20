@@ -20,4 +20,14 @@ public class Joueur:Personnage
         return this.etoiles;
     }
 
+    public void updateEtoiles1()
+    {
+        this.etoiles = "*";
+    }
+
+    public void updateEtoiles2()
+    {
+        this.etoiles = "**";
+    }
+
 }

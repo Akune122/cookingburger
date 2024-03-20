@@ -21,6 +21,12 @@ c3 = new Client("ZAERCHER","Olga","<Miaou miaou ! Miaou miaou ! Miaou miaou ! Mi
 Client c4;
 c4 = new Client("ZAERCHER","Yves","<Bonjour mon petit gars, j'aimerai un burger avec de la salade absolument mais je n'aime pas l'emmental !>",0,emmental,salade);
 
+Client c5;
+c3 = new Client("BASTIEN","Cerise","<Miaou miaou ! Miaou miaou ! Miaou miaou ! Miaou miaou ! Miaou miaou ! Miaou miaou ! (Vous croyez entendre steak et parmesan)>",0,parmesan,steak);
+
+Client c6;
+c4 = new Client("SAMARAS","Ken","<Yo man, tu me fais un petit plat pas trop mal stp ;) Je kiff grave de bacon mais pas les tomates>",0,tomate,bacon);
+
 ---------------------------------------------------------------------------------------------------------------------------
 
 Critique 
