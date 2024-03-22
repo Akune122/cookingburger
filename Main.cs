@@ -106,11 +106,23 @@ c5 = new Client("BASTIEN","Cerise","<Miaou miaou ! Miaou miaou ! Miaou miaou ! M
 Client c6;
 c6 = new Client("SAMARAS","Ken","<Yo man, tu me fais un petit plat pas trop mal stp ;) Je kiff grave de bacon mais pas les tomates>",0,tomate,bacon);
 
+Client c7;
+c7 = new Client("BASTIEN","Blanchette","<Miaou miaou ! Miaou miaou ! Miaou miaou ! Miaou miaou ! Miaou miaou ! Miaou miaou ! (Vous croyez entendre steak et sesame)>",0,sesame,steak);
+
+Client c8;
+c8 = new Client("VERSTAPPEN","Max","<Hallo, ik wil graag een hamburger met spek, maar zonder salade.>",0,salade,bacon);
+
+Client c9;
+c9 = new Client("LECLERC","Charles","<Bonsoir, je serai ravi d'avoir un burger avec supplément emmental et surtout pas de POULET>",0,poulet,emmental);
+
+Client c10;
+c10 = new Client("******","Frisk","<-_- (je pense que de la viande de burger sans oignon fera l'affaire !)>",0,oignon,steak);
+
 //-------------------------------
 // Listes Client
 //-------------------------------
 
-Client[] rep0 = new Client[] {c1,c2,c3,c4,c5,c6};
+Client[] rep0 = new Client[] {c1,c2,c3,c4,c5,c6,c7,c8,c9,c10};
 Critique[] rep20 = new Critique[] {critique1};
 
 
@@ -120,8 +132,8 @@ Critique[] rep20 = new Critique[] {critique1};
 do{
     do {
     foreach (var client in rep0) {
-        j1.updateEtoiles1();
-        if (j1.getRep()>50 || j1.getRep()<0)
+        j1.updateEtoiles();
+        if (j1.getRep()>=50 || j1.getRep()<0)
     {
         continue;
     }
@@ -365,8 +377,8 @@ do{
 //-------------------------------------------------------------------------------------------------------------------
     do {
     foreach (var client in rep20) {
-        j1.updateEtoiles2();
-        if (j1.getRep()>100 || j1.getRep()<70)
+        j1.updateEtoiles();
+        if (j1.getRep()>=70 || j1.getRep()<50)
     {
         continue;
     }
@@ -610,16 +622,16 @@ do{
     Console.ReadLine();
     }
 
-    }while(j1.getRep()>=70 && j1.getRep()<100);
+    }while(j1.getRep()>=50 && j1.getRep()<70);
 
-}while(j1.getRep()>0);
+}while(j1.getRep()>0 || j1.getRep()>=70);
 
-if (j1.getRep()>100)
+if (j1.getRep()>=70)
 {
     Console.WriteLine("----------------------------------------------------------------------------------------");
     Console.WriteLine("Votre pseudo : "+j1.getPseudo()+" / Votre réputation : "+j1.getRep()+" / Vos étoiles : "+j1.getEtoiles());
     Console.WriteLine("----------------------------------------------------------------------------------------");
-    Console.WriteLine("Bravo ! Voous êtes le chef le plus connu de France grâce à vos burgers !");
+    Console.WriteLine("Bravo ! Vous êtes le chef le plus connu de France grâce à vos burgers !");
 }
 else {
     Console.WriteLine("----------------------------------------------------------------------------------------");

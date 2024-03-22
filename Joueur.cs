@@ -20,14 +20,17 @@ public class Joueur:Personnage
         return this.etoiles;
     }
 
-    public void updateEtoiles1()
+    public void updateEtoiles()
     {
-        this.etoiles = "*";
+        if (this.getRep()<50 && this.getRep()>0) {
+            this.etoiles = "*";
     }
-
-    public void updateEtoiles2()
-    {
-        this.etoiles = "**";
+    else if (this.getRep()>50) {
+            this.etoiles = "**";
+    }
+    else if (this.getRep()<0) {
+            this.etoiles = "";
+    }
     }
 
 }
